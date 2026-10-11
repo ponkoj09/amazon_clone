@@ -1,12 +1,834 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Clone</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopNova - Modern E-Commerce Shopping</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <p>🎉 Season Sale: Up to 50% Off | Free Shipping on Orders Over $50!</p>
+      <div class="announcement-links">
+        <a href="#help">Help &amp; FAQs</a>
+        <a href="#track">Track Order</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span>Shop<strong>Nova</strong></span>
+      </a>
+
+      <!-- Search Bar -->
+      <form class="search-bar" action="#search" method="get">
+        <input type="text" placeholder="Search for products, brands and more..." aria-label="Search products">
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+
+      <!-- User Account & Cart Links -->
+      <div class="header-actions">
+        <a href="#account" class="action-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="action-text">Account</span>
+        </a>
+        <a href="#cart" class="action-btn cart-btn">
+          <div class="cart-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge">3</span>
+          </div>
+          <span class="action-text">Cart</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-bar">
+      <div class="container nav-container">
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#trending">Trending Deals</a></li>
+          <li><a href="#electronics">Electronics</a></li>
+          <li><a href="#fashion">Fashion</a></li>
+          <li><a href="#clearance">Clearance</a></li>
+        </ul>
+        <span class="nav-hot-deal">Hot Offer: <strong>NOVA25</strong> for 25% Off</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge hero-badge">New Arrival 2025</span>
+        <h1 class="hero-title">Elevate Your Everyday Style &amp; Tech</h1>
+        <p class="hero-description">
+          Discover handpicked collections of premium electronics, contemporary fashion, and lifestyle essentials with up to 50% seasonal discounts.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#featured" class="btn btn-primary">Shop Now</a>
+          <a href="#trending" class="btn btn-secondary">Explore Deals</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>50k+</strong>
+            <span>Active Customers</span>
+          </div>
+          <div class="stat-item">
+            <strong>1.2k+</strong>
+            <span>Premium Brands</span>
+          </div>
+          <div class="stat-item">
+            <strong>4.9 ★</strong>
+            <span>Product Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-banner-visual">
+        <div class="hero-visual-card">
+          <div class="visual-tag">Deal of the Week</div>
+          <div class="visual-illustration">
+            <svg viewBox="0 0 200 200" class="hero-svg">
+              <defs>
+                <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2563eb" />
+                  <stop offset="100%" stop-color="#1d4ed8" />
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="80" fill="url(#heroGrad)" opacity="0.15" />
+              <rect x="55" y="40" width="90" height="120" rx="16" fill="#1e293b" />
+              <rect x="62" y="48" width="76" height="104" rx="10" fill="#2563eb" />
+              <circle cx="100" cy="100" r="24" fill="#ffffff" opacity="0.9" />
+              <path d="M93 88 L114 100 L93 112 Z" fill="#2563eb" />
+            </svg>
+          </div>
+          <div class="visual-details">
+            <h3>NovaPro Ultra Wireless</h3>
+            <p class="price"><span class="price-old">$199.00</span> <span class="price-current">$129.00</span></p>
+            <span class="stock-pill">Limited Stock Remaining</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Features Ribbon -->
+  <section class="features-ribbon">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <div>
+          <h4>Free Worldwide Delivery</h4>
+          <p>On orders above $50</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div>
+          <h4>Secure Payments</h4>
+          <p>100% encrypted &amp; verified</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+        </div>
+        <div>
+          <h4>30-Day Free Return</h4>
+          <p>Hassle-free guarantee</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </div>
+        <div>
+          <h4>24/7 Dedicated Support</h4>
+          <p>Instant expert assistance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories Section -->
+  <section class="section categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Browse by Department</span>
+        <h2 class="section-title">Explore Top Categories</h2>
+        <p class="section-subtitle">Find exactly what you need organized by our most popular product lines.</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Category 1: Electronics -->
+        <a href="#electronics" class="category-card">
+          <div class="category-graphic cat-electronics">
+            <svg viewBox="0 0 64 64" class="cat-svg">
+              <rect x="8" y="12" width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="3" />
+              <line x1="24" y1="52" x2="40" y2="52" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              <line x1="32" y1="44" x2="32" y2="52" stroke="currentColor" stroke-width="3" />
+              <circle cx="32" cy="28" r="6" fill="currentColor" opacity="0.3" />
+            </svg>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Electronics</h3>
+            <span class="category-count">140+ Items</span>
+          </div>
+        </a>
+
+        <!-- Category 2: Men's Fashion -->
+        <a href="#mens-fashion" class="category-card">
+          <div class="category-graphic cat-mens">
+            <svg viewBox="0 0 64 64" class="cat-svg">
+              <path d="M16 16 L26 24 L32 16 L38 24 L48 16 L54 28 L46 32 L46 54 L18 54 L18 32 L10 28 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+              <line x1="32" y1="24" x2="32" y2="54" stroke="currentColor" stroke-width="2.5" stroke-dasharray="2 3" />
+            </svg>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Men's Fashion</h3>
+            <span class="category-count">210+ Items</span>
+          </div>
+        </a>
+
+        <!-- Category 3: Women's Fashion -->
+        <a href="#womens-fashion" class="category-card">
+          <div class="category-graphic cat-womens">
+            <svg viewBox="0 0 64 64" class="cat-svg">
+              <path d="M22 14 Q32 20 42 14 L48 24 L40 28 L48 54 L16 54 L24 28 L16 24 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+              <line x1="28" y1="28" x2="36" y2="28" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Women's Fashion</h3>
+            <span class="category-count">320+ Items</span>
+          </div>
+        </a>
+
+        <!-- Category 4: Shoes -->
+        <a href="#shoes" class="category-card">
+          <div class="category-graphic cat-shoes">
+            <svg viewBox="0 0 64 64" class="cat-svg">
+              <path d="M10 38 L24 24 L36 30 L48 28 C54 28 56 34 56 42 L10 42 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+              <rect x="8" y="42" width="48" height="6" rx="2" fill="currentColor" opacity="0.3" />
+              <line x1="28" y1="26" x2="34" y2="34" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Shoes</h3>
+            <span class="category-count">95+ Items</span>
+          </div>
+        </a>
+
+        <!-- Category 5: Watches -->
+        <a href="#watches" class="category-card">
+          <div class="category-graphic cat-watches">
+            <svg viewBox="0 0 64 64" class="cat-svg">
+              <rect x="22" y="8" width="20" height="48" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="32" cy="32" r="14" fill="#ffffff" stroke="currentColor" stroke-width="3" />
+              <line x1="32" y1="32" x2="32" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <line x1="32" y1="32" x2="38" y2="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Watches</h3>
+            <span class="category-count">65+ Items</span>
+          </div>
+        </a>
+
+        <!-- Category 6: Accessories -->
+        <a href="#accessories" class="category-card">
+          <div class="category-graphic cat-accessories">
+            <svg viewBox="0 0 64 64" class="cat-svg">
+              <circle cx="20" cy="32" r="10" fill="none" stroke="currentColor" stroke-width="3" />
+              <circle cx="44" cy="32" r="10" fill="none" stroke="currentColor" stroke-width="3" />
+              <line x1="30" y1="30" x2="34" y2="30" stroke="currentColor" stroke-width="3" />
+              <path d="M12 28 C12 22 16 18 20 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+              <path d="M52 28 C52 22 48 18 44 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            </svg>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Accessories</h3>
+            <span class="category-count">180+ Items</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="section featured-section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Curated Collection</span>
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-subtitle">Top rated picks meticulously crafted for quality, comfort, and style.</p>
+      </div>
+
+      <!-- Responsive CSS Grid for Products -->
+      <div class="product-grid">
+
+        <!-- Product Card 1 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="badge discount-badge">-25%</span>
+            <div class="product-art prod-bg-1">
+              <svg viewBox="0 0 100 100" class="prod-svg">
+                <rect x="22" y="25" width="56" height="50" rx="8" fill="#3b82f6" />
+                <rect x="28" y="32" width="44" height="34" rx="4" fill="#1e293b" />
+                <circle cx="50" cy="49" r="8" fill="#60a5fa" />
+              </svg>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Add to Wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Electronics</span>
+            <h3 class="product-name">NovaPulse ANC Wireless Headphones</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.9</span>
+              <span class="rating-count">(124)</span>
+            </div>
+            <div class="product-price-row">
+              <div class="price-box">
+                <span class="current-price">$89.99</span>
+                <span class="original-price">$119.99</span>
+              </div>
+              <button class="add-to-cart-btn" aria-label="Add NovaPulse ANC Wireless Headphones to Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 2 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="badge discount-badge">-35%</span>
+            <div class="product-art prod-bg-2">
+              <svg viewBox="0 0 100 100" class="prod-svg">
+                <circle cx="50" cy="50" r="28" fill="#0f172a" />
+                <circle cx="50" cy="50" r="22" fill="#2563eb" />
+                <line x1="50" y1="50" x2="50" y2="36" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="50" y1="50" x2="60" y2="50" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                <rect x="42" y="10" width="16" height="12" rx="3" fill="#64748b" />
+                <rect x="42" y="78" width="16" height="12" rx="3" fill="#64748b" />
+              </svg>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Add to Wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Watches</span>
+            <h3 class="product-name">Chronos Minimalist Steel Watch</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+              <span class="rating-count">(89)</span>
+            </div>
+            <div class="product-price-row">
+              <div class="price-box">
+                <span class="current-price">$149.00</span>
+                <span class="original-price">$229.00</span>
+              </div>
+              <button class="add-to-cart-btn" aria-label="Add Chronos Minimalist Steel Watch to Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 3 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="badge discount-badge">-15%</span>
+            <div class="product-art prod-bg-3">
+              <svg viewBox="0 0 100 100" class="prod-svg">
+                <path d="M20 58 L38 34 L54 42 L72 38 C80 38 84 46 84 62 L20 62 Z" fill="#2563eb" />
+                <rect x="18" y="62" width="68" height="8" rx="3" fill="#0f172a" />
+                <line x1="42" y1="38" x2="52" y2="48" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+                <line x1="48" y1="36" x2="58" y2="46" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Add to Wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Shoes</span>
+            <h3 class="product-name">AeroStride Performance Runners</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.7</span>
+              <span class="rating-count">(215)</span>
+            </div>
+            <div class="product-price-row">
+              <div class="price-box">
+                <span class="current-price">$76.50</span>
+                <span class="original-price">$90.00</span>
+              </div>
+              <button class="add-to-cart-btn" aria-label="Add AeroStride Performance Runners to Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 4 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="badge discount-badge">-20%</span>
+            <div class="product-art prod-bg-4">
+              <svg viewBox="0 0 100 100" class="prod-svg">
+                <path d="M28 24 L40 34 L50 24 L60 34 L72 24 L80 40 L70 44 L70 76 L30 76 L30 44 L20 40 Z" fill="#1e293b" />
+                <path d="M40 34 L50 48 L60 34" stroke="#2563eb" stroke-width="3" fill="none" />
+              </svg>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Add to Wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Men's Fashion</span>
+            <h3 class="product-name">Urban Tailored Oxford Jacket</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.9</span>
+              <span class="rating-count">(76)</span>
+            </div>
+            <div class="product-price-row">
+              <div class="price-box">
+                <span class="current-price">$112.00</span>
+                <span class="original-price">$140.00</span>
+              </div>
+              <button class="add-to-cart-btn" aria-label="Add Urban Tailored Oxford Jacket to Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 5 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="badge discount-badge">-30%</span>
+            <div class="product-art prod-bg-5">
+              <svg viewBox="0 0 100 100" class="prod-svg">
+                <rect x="25" y="32" width="50" height="42" rx="10" fill="#2563eb" />
+                <path d="M38 32 C38 20 62 20 62 32" stroke="#0f172a" stroke-width="5" fill="none" />
+                <circle cx="50" cy="50" r="5" fill="#f8fafc" />
+              </svg>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Add to Wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Women's Fashion</span>
+            <h3 class="product-name">Verona Italian Leather Tote</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+              <span class="rating-count">(94)</span>
+            </div>
+            <div class="product-price-row">
+              <div class="price-box">
+                <span class="current-price">$139.99</span>
+                <span class="original-price">$199.99</span>
+              </div>
+              <button class="add-to-cart-btn" aria-label="Add Verona Italian Leather Tote to Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 6 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="badge discount-badge">-40%</span>
+            <div class="product-art prod-bg-6">
+              <svg viewBox="0 0 100 100" class="prod-svg">
+                <circle cx="34" cy="50" r="16" fill="#1e293b" />
+                <circle cx="66" cy="50" r="16" fill="#1e293b" />
+                <rect x="42" y="47" width="16" height="6" fill="#2563eb" />
+                <path d="M20 44 L16 36" stroke="#0f172a" stroke-width="4" stroke-linecap="round" />
+                <path d="M80 44 L84 36" stroke="#0f172a" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Add to Wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Accessories</span>
+            <h3 class="product-name">Solstice Polarized Sunglasses</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.6</span>
+              <span class="rating-count">(63)</span>
+            </div>
+            <div class="product-price-row">
+              <div class="price-box">
+                <span class="current-price">$45.00</span>
+                <span class="original-price">$75.00</span>
+              </div>
+              <button class="add-to-cart-btn" aria-label="Add Solstice Polarized Sunglasses to Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Products & Special Offers Section -->
+  <section class="section trending-section" id="trending">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Limited Time Offers</span>
+        <h2 class="section-title">Trending Deals &amp; Daily Specials</h2>
+        <p class="section-subtitle">Grab these exclusive discounts before stock runs out.</p>
+      </div>
+
+      <div class="trending-layout">
+        <!-- Deal Highlight Banner Card -->
+        <div class="deal-highlight-card">
+          <div class="deal-badge">Spotlight Deal</div>
+          <h3 class="deal-title">Smart Living Home Ecosystem</h3>
+          <p class="deal-desc">Bundle smart speaker, ambient lighting &amp; hub control at an unbeatable combo discount.</p>
+          <div class="countdown-mockup">
+            <span class="time-label">Offer Expires In:</span>
+            <div class="time-blocks">
+              <span class="time-box"><strong>14</strong><small>Hours</small></span>
+              <span class="time-box"><strong>32</strong><small>Mins</small></span>
+              <span class="time-box"><strong>58</strong><small>Secs</small></span>
+            </div>
+          </div>
+          <div class="deal-pricing">
+            <span class="deal-new-price">$189.99</span>
+            <span class="deal-was-price">$320.00</span>
+            <span class="deal-save-badge">Save $130</span>
+          </div>
+          <a href="#featured" class="btn btn-primary">Claim Special Offer</a>
+        </div>
+
+        <!-- Trending Sub-cards -->
+        <div class="trending-grid">
+
+          <article class="trending-card">
+            <div class="trending-badge">Hot Pick</div>
+            <div class="trending-graphic-wrap">
+              <svg viewBox="0 0 80 80" class="mini-svg">
+                <rect x="18" y="14" width="44" height="52" rx="6" fill="#1e293b" />
+                <rect x="24" y="20" width="32" height="38" rx="3" fill="#2563eb" />
+                <circle cx="40" cy="40" r="8" fill="#ffffff" opacity="0.8" />
+              </svg>
+            </div>
+            <div class="trending-content">
+              <span class="product-category">Electronics</span>
+              <h4 class="trending-card-title">NovaTab Pro 11-inch Retina</h4>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-value">4.9</span>
+              </div>
+              <div class="price-row-compact">
+                <span class="current-price">$349.00</span>
+                <span class="original-price">$450.00</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="trending-card">
+            <div class="trending-badge">Best Seller</div>
+            <div class="trending-graphic-wrap">
+              <svg viewBox="0 0 80 80" class="mini-svg">
+                <rect x="20" y="22" width="40" height="42" rx="8" fill="#0f172a" />
+                <path d="M28 22 C28 14 52 14 52 22" stroke="#2563eb" stroke-width="4" fill="none" />
+                <line x1="20" y1="36" x2="60" y2="36" stroke="#3b82f6" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="trending-content">
+              <span class="product-category">Accessories</span>
+              <h4 class="trending-card-title">Voyager Waterproof Commuter Bag</h4>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-value">4.8</span>
+              </div>
+              <div class="price-row-compact">
+                <span class="current-price">$68.00</span>
+                <span class="original-price">$98.00</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="trending-card">
+            <div class="trending-badge">-45% Off</div>
+            <div class="trending-graphic-wrap">
+              <svg viewBox="0 0 80 80" class="mini-svg">
+                <circle cx="40" cy="40" r="22" fill="#2563eb" />
+                <circle cx="40" cy="40" r="16" fill="#1e293b" />
+                <line x1="40" y1="40" x2="40" y2="30" stroke="#60a5fa" stroke-width="2" />
+                <line x1="40" y1="40" x2="48" y2="40" stroke="#60a5fa" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="trending-content">
+              <span class="product-category">Watches</span>
+              <h4 class="trending-card-title">Apex Hybrid Fitness Chronograph</h4>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-value">4.7</span>
+              </div>
+              <div class="price-row-compact">
+                <span class="current-price">$99.00</span>
+                <span class="original-price">$180.00</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Promotional Banner -->
+  <section class="promo-banner-section">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="promo-text-wrap">
+          <span class="promo-tag">Flash Summer Clearance</span>
+          <h2 class="promo-headline">Get Up to 60% Off Trending Styles</h2>
+          <p class="promo-sub">Use coupon code <strong class="promo-coupon">NOVA60</strong> at checkout. Offer valid through the weekend only.</p>
+          <div class="promo-action">
+            <a href="#featured" class="btn btn-banner">Shop Seasonal Sale</a>
+          </div>
+        </div>
+        <div class="promo-graphic-box">
+          <div class="promo-circle-badge">
+            <span class="percent">60%</span>
+            <span class="off-text">OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <h2 class="newsletter-title">Subscribe to the Nova Club</h2>
+        <p class="newsletter-description">
+          Receive exclusive VIP offers, early access to seasonal launches, and insider shopping discounts straight to your inbox.
+        </p>
+        <form class="newsletter-form" action="#subscribed" method="get">
+          <div class="input-group">
+            <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary">Subscribe Now</button>
+          </div>
+          <span class="newsletter-note">🔒 We respect your privacy. No spam, ever. Unsubscribe at any time.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Col 1: About ShopNova -->
+      <div class="footer-col brand-col">
+        <a href="#" class="logo footer-logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Shop<strong>Nova</strong></span>
+        </a>
+        <p class="footer-desc">
+          ShopNova is your premier destination for modern lifestyle essentials, cutting-edge electronics, and timeless fashion collections.
+        </p>
+        <div class="social-links">
+          <a href="#twitter" class="social-icon" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <a href="#facebook" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#instagram" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#youtube" class="social-icon" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: About Us -->
+      <div class="footer-col">
+        <h3 class="footer-heading">About Us</h3>
+        <ul class="footer-links">
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#careers">Careers &amp; Culture</a></li>
+          <li><a href="#press">Press &amp; Media</a></li>
+          <li><a href="#sustainability">Sustainability</a></li>
+          <li><a href="#investors">Investor Relations</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Help Center -->
+      <div class="footer-col">
+        <h3 class="footer-heading">Help Center</h3>
+        <ul class="footer-links">
+          <li><a href="#orders">Track Your Order</a></li>
+          <li><a href="#shipping">Shipping &amp; Delivery</a></li>
+          <li><a href="#returns">Returns &amp; Exchanges</a></li>
+          <li><a href="#payments">Payment Options</a></li>
+          <li><a href="#terms">Terms &amp; Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact -->
+      <div class="footer-col contact-col">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="contact-info">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>742 Nova Boulevard, Suite 500, New York, NY 10001</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+1 (800) 555-NOVA</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>support@shopnova.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2025 ShopNova Inc. All rights reserved. Designed with pure HTML5 &amp; CSS3.</p>
+        <div class="payment-methods">
+          <span class="pay-tag">Visa</span>
+          <span class="pay-tag">Mastercard</span>
+          <span class="pay-tag">Amex</span>
+          <span class="pay-tag">PayPal</span>
+          <span class="pay-tag">Apple Pay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
